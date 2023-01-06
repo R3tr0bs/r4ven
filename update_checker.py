@@ -5,6 +5,7 @@ to update it, if he dose, updates, otherwise, leaves
 """
 
 from requests import get
+from os import system
 
 repo_url = "https://github.com/R3tr0bs/r4ven.git"
 version = "0.0"
@@ -34,8 +35,8 @@ def update_repo():
     updates the repo
     """
     print("Updating R4ven")
-    shell(f"cd .. && rm -rf r4ven && git clone {repo_url}")
-    sprint(f"\nR4ven has been updated successfully!! Please restart terminal!")
+    system(f"cd .. && rm -rf r4ven && git clone {repo_url}")
+    print(f"\nR4ven has been updated successfully!! Please restart terminal!")
     exit()
     
 
