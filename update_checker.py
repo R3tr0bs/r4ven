@@ -45,6 +45,7 @@ def get_version():
     """
     gets the current version from the version file
     """
+    global version
     try:
       with open("./Version.txt", r) as version_file:
         version = version_file.read(1).strip()
