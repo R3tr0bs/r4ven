@@ -2,6 +2,7 @@
 import os
 import uvicorn
 import webapp_backend
+import update_checker
 
 twitter_url = 'https://spyboy.in/twitter'
 discord = 'https://spyboy.in/Discord'
@@ -29,6 +30,7 @@ def main():
     """
     program entry_point
     """
+    update_checker.check_for_update()
     print_banners()
     remove_old_discord_webhook()
     get_new_discord_webhook()
