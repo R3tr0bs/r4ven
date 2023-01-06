@@ -6,6 +6,7 @@ to update it, if he dose, updates, otherwise, leaves
 
 from requests import get
 from os import system
+from time import sleep
 
 repo_url = "https://github.com/R3tr0bs/r4ven.git"
 version = "0.0"
@@ -45,8 +46,8 @@ def get_version():
     gets the current version from the version file
     """
     try:
-      with open("Version.txt", r) as version_file:
-        version_file = version_file.read(1).strip()
+      with open("./Version.txt", r) as version_file:
+        version = version_file.read(1).strip()
     except:
       pass
     
