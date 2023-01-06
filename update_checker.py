@@ -47,7 +47,7 @@ def get_version():
     """
     global version
     try:
-      with open("./Version.txt", r) as version_file:
+      with open("./Version.txt", 'r') as version_file:
         version = version_file.read(1).strip()
     except:
       pass
